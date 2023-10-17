@@ -1,0 +1,50 @@
+@media screen and (max-width : 1245px) {
+
+    header{
+        padding: 3rem 6rem;
+    }
+
+    header .logo img{
+        height: 3rem;
+    }
+
+    header .navBar{
+        overflow-x: hidden;
+    }
+
+    header .navBar .search input.show{
+        max-width: 15rem;
+    }
+
+    header .menu li{
+        font-size: 1.5rem;
+    }
+
+    header .menu .menuSub{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width : 1000px) {
+    header .navBar{
+        display: none;
+    }
+
+    header {
+        /* height: 100%; */
+        display: flex;
+        align-items: center;
+    }
+
+    header .container{
+        margin: 0 auto;
+    }
+
+    header .mobileMenu i{
+        display: initial;
+    }
+
+    #headerFixed{
+        max-height: 7.5rem;
+    }
+}

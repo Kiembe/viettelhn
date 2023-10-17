@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+:root{
+    --red-primary : #ef0032;
+    --box-shadow : rgba(0,0,0,0.25);
+}
+
+/* body{
+    overflow: hidden;
+} */
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}

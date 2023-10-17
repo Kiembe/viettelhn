@@ -1,0 +1,583 @@
+/* <-- HEADER CSS --> */
+
+header{
+    height: 7.5rem;
+    width: 100%;
+    padding: 3rem 10rem;
+    box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0,0.1);
+}
+
+#headerFixed{
+    top: -100%;
+    position: fixed;
+    z-index: 0;
+}
+
+#headerFixed.sticky{
+    transform: translateY(0%);
+    transition: 0.5s;   
+    position: fixed;
+    background: #fff;
+    top: 0;
+    left: 0;
+}
+
+#headerFixed.opacity{
+    background: #ffffffee;
+}
+
+header .container{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img{
+    height: 4.5rem;
+}
+
+header .menu,
+header .navBar {
+    display: flex;
+    align-items: center;
+}
+
+header .menu li{
+    font-size : 1.6rem;
+    text-transform : uppercase;
+    font-weight: bold;
+    padding: 1rem;
+    cursor: pointer;
+    color: var(--red-primary);
+    transition: all 0.5s;
+}
+
+
+header .menu li:hover,
+header .menu li:hover i{
+    color: #ffe155;
+}
+
+header .menu li i{
+    color: var(--red-primary);
+    font-size: 1.8rem;
+    transition: all 0.5s;
+}
+
+header .menu .menuSub{
+    position: relative;
+    font-size: 1.6rem;
+    color: var(--red-primary);
+    transition: all 0.5s;
+
+}
+
+header .menu .menuSub:hover{
+    color: #ffe155;
+}
+
+header .menu .openSubMenu:hover .subMenu{
+    display: block;
+}
+
+header .menu .subMenu{
+    display: none;
+    position: absolute;
+    top: 7.5rem;
+    background: var(--red-primary);
+}
+
+header .menu .subMenu::after{
+    content : "";
+    width:100%;
+    height: 2rem;
+    position: absolute;
+    top: -2rem; 
+}
+
+header .menu .subMenu li,
+header .menu .subMenu li i{
+    color: #fff;
+}
+
+
+header .menu .subMenu li:hover,
+header .menu .subMenu li:hover i{
+    color: #ffe155;
+    background-color: #b5314dd4;
+}
+
+/* <-- MOBILE MENU --> */
+
+header .mobileMenu i{
+    font-size: 4rem;
+    color: var(--red-primary);
+    cursor: pointer;
+    display: none;
+}
+
+header .mobileMenuShow {
+    position: fixed;
+    background: rgba(0, 0, 0,0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    transition: all 0.2s;
+    z-index: 1;
+}
+
+header .mobileMenuShow.show{
+    display: initial;
+}
+
+header .mobileMenuShow.show .container{
+    transform: translateX(0);
+}
+
+header .mobileMenuShow .container{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: all 0.5s;
+    background: #fff;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding: 0;
+    width: 70%;
+}
+
+header .mobileMenuShow .container .menu{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 0; 
+    width: 100%;
+}
+
+header .mobileMenuShow .container .menu ul{
+    width: 100%;
+}
+
+header .mobileMenuShow .container .menu ul li{
+    font-size: 1.6rem;
+    padding: 1.5rem;
+    border: 0.1rem solid #cccccc58;
+}
+
+header .mobileMenuShow>i{
+    font-size: 3rem;
+    color: #fff;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+header .mobileMenuShow .container .search {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+}
+
+header .mobileMenuShow .container .search input {
+    width: 80%;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem 0rem 0rem 1rem;
+    outline: none;
+    border: 0.1rem solid #ccc;
+    font-size: 1.6rem;
+}
+
+header .mobileMenuShow .container .search input:focus{
+    border: 0.1rem solid var(--red-primary);
+}
+
+header .mobileMenuShow .container .search button{
+    font-size: 3rem;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    background: var(--red-primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0rem 1rem 1rem 0rem;
+}
+
+/* <-- --> */
+
+header .navBar .search{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+header .navBar .search input{
+    opacity: 0;
+    margin-left: 1rem;
+    width: 0;
+    padding: 0;
+    font-size: 1.4rem;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    transition: all 0.5s;
+}
+
+header .navBar .search input.show{
+    opacity: 1;
+    margin-left: 1rem;
+    width: 20rem;
+    padding: 0.75rem 1rem;
+    font-size: 1.4rem;
+    outline: none;
+    border: 0.2rem solid #ccc;
+    border-radius: 1rem 0rem 0rem 1rem;
+    transition: width 0.5s;
+    border-right: none;
+}
+
+header .navBar .search input::placeholder{
+    color: #ccc;
+}
+
+header .navBar .search input:focus.show{
+    border: 0.2rem solid var(--red-primary);
+    border-right: none;
+}
+
+header .navBar .search button{
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .navBar .search button.show{
+    background: var(--red-primary);
+    border-radius: 0rem 1rem 1rem 0rem;
+    margin: 0;
+    padding: 0.13rem 0.5rem;
+    border: 0.2rem solid var(--red-primary);
+    border-left: none;
+
+
+}
+
+header .navBar .search button.show i{
+    color: #fff;
+
+}
+
+header .navBar .search button i{
+    font-size: 3rem;
+    color: var(--red-primary);
+    cursor: pointer;
+    position: relative;
+}
+
+/* <-- MAIN CSS --> */
+main{
+    padding: 5rem 2%;
+    display: flex;
+    justify-content: center;
+}
+
+main .container{
+    width: 90%;
+}
+
+main .title{
+    text-align: center;
+}
+
+main .title h1{
+    font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+main .title p{
+    font-size: 1.8rem;
+    padding: 0 1rem;
+    margin: 3rem 0;
+}
+
+/* <-- PRODUCT --> */
+
+#rootHome h5{
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    margin: 1.5rem 0 ;
+    display: flex;
+    align-items: center;
+}
+
+#rootHome table{
+    width: 100%;
+    margin-bottom: 5rem;
+    /* background: #0000000c;    */
+}
+
+#rootHome table,
+#rootHome table tr,
+#rootHome table th,
+#rootHome table td{
+    border: 0.1rem solid #ccc;
+    border-collapse: collapse;
+}
+
+#rootHome table th{
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem;
+    color: #fff;
+    background-color: var(--red-primary);
+}
+
+
+#rootHome table td ul li{
+    padding: 1rem;
+    font-size: 1.6rem;
+
+}
+
+#rootHome table .tbContent .proInf{
+    text-align: center;
+    width: 15%;
+}
+
+#rootHome table .tbContent .proInf ul li:first-child{
+    font-weight: bold;
+}
+
+#rootHome table .tbContent .proDetail{
+    text-align: center;
+}
+
+#rootHome table .tbContent .proDetail .call{
+    color: #ee9b01;
+}
+
+#rootHome table .tbContent .proAct {
+    width: 25%;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+#rootHome table .tbContent .proAct p,
+#rootHome table .tbContent .proAct span{
+    font-size: 1.6rem;
+}
+
+#rootHome table .tbContent .proAct p{
+    font-weight: bold;
+    color: var(--red-primary);
+}
+
+#rootHome table .tbContent .proAct span{
+    color: #000;
+    font-weight: normal;
+}
+
+#rootHome table .tbContent .proAct a{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    background-color:var(--red-primary);
+    padding: 1rem 3.5rem;
+    border-radius: 1rem 0rem 1rem 0rem;
+}
+
+#rootHome table .proViewMore {
+    background-color:var(--red-primary);
+    
+    
+}
+
+#rootHome table .proViewMore td{
+    border: none;
+    text-align: center;
+    padding: 1rem;
+}
+
+#rootHome table .proViewMore td a{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+}
+
+#rootHome .call #rootCall .call{
+    color: #000;
+}
+
+/* <-- tutorial --> */
+
+.tutorial h5{
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.tutorial p{
+    font-size: 1.8rem;
+    padding: 0.5rem 0;
+}
+
+.tutorial .syntax{
+    font-size: 2rem;
+    color: var(--red-primary);
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+.tutorial .syntax span{
+    font-size: 1.8rem;
+    color: #000;
+}
+
+.tutorial .dksd120{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.tutorial .explain{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.tutorial ul{
+    padding: 1rem;
+}
+
+.tutorial ul li{
+    font-size: 1.8rem;
+    padding: 0.5rem;
+
+}
+
+.tutorial ul li span{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* <-- NOTE --> */
+
+.note h5{
+    font-size: 3rem;
+    margin-top: 5rem;
+}
+
+.note p{
+    font-size: 1.8rem;
+    padding: 0.5rem 0;
+}
+
+.note p span{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.note .tk{
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+
+}
+
+.note img{
+    width: 100%;
+}
+
+.note .someone{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.note ul{
+    padding: 1rem;
+}
+
+.note ul li{
+    font-size: 1.8rem;
+    padding: 0.5rem;
+
+}
+
+.note ul li span{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* <-- FOOTER --> */
+
+footer{
+    background: url(../assets/img/footer.png) center no-repeat ;
+    background-size: cover;
+    background-color: #cccccc8e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 2%;
+}
+
+footer .container .infor img{
+    height: 4.5rem;
+}
+
+footer .container .infor p{
+    font-size: 1.8rem;
+    padding: 0.5rem;
+}
+
+footer .container .listPro ul li,
+footer .container .about ul li{
+    font-size: 1.8rem;
+    padding: 0.5rem;
+}
+
+
+footer .container .listPro a,
+footer .container .about a{
+    color: initial;
+}
+
+footer .container .about span{
+    font-size: 1.8rem;
+}
+
+footer .container .about span:hover{
+    color: var(--red-primary);
+}
+
+footer .copyright{
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.8rem;
+    background-color:var(--red-primary);
+    color: #fff;
+}
+
+footer .copyright span{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
