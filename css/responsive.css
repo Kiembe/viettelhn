@@ -47,4 +47,71 @@
     #headerFixed{
         max-height: 7.5rem;
     }
+
+    #rootHome table .tbContent .proAct a{
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width : 845px) {
+
+    #rootHome h5,
+    #rootMonth h5,
+    #rootCall h5{
+        font-size: 1.6rem;
+    }
+
+    #rootHome table td ul li{
+        padding: 0.5rem;
+        font-size: 1.4rem;
+    }
+
+    
+}
+
+@media screen and (max-width : 760px) {
+    #rootHome table th{
+        font-size: 1.6rem;
+    }
+
+
+    #rootHome table .tbContent .proAct a{
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+
+    #rootHome table .tbContent .proAct{
+        width: 10rem;
+        padding: 1rem 0;
+    }
+
+    .viewMore{
+        font-size: 1.4rem;
+    }
+
+
+    footer .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer .container>div {
+        padding: 1rem;
+    }
+
+}
+
+@media screen and (max-width : 500px) {
+    header{
+        padding: 2rem;
+    }
+
+    #rootHome table .tbContent .proInf{
+        padding: 0;
+    }
+
+    #rootHome table .tbContent .proInf ul li{
+        padding: 0.5rem 0;
+    }
+
 }

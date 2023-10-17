@@ -348,7 +348,6 @@ main .title p{
 #rootHome table td ul li{
     padding: 1rem;
     font-size: 1.6rem;
-
 }
 
 #rootHome table .tbContent .proInf{
@@ -369,9 +368,9 @@ main .title p{
 }
 
 #rootHome table .tbContent .proAct {
-    width: 25%;
+    max-width: 25%;
     text-align: center;
-    padding: 0 1rem;
+    padding: 1rem;
 }
 
 #rootHome table .tbContent .proAct p,
@@ -391,6 +390,7 @@ main .title p{
 
 #rootHome table .tbContent .proAct a{
     font-size: 1.6rem;
+    display: inline-block;
     text-transform: uppercase;
     font-weight: bold;
     color: #fff;
@@ -401,21 +401,25 @@ main .title p{
 
 #rootHome table .proViewMore {
     background-color:var(--red-primary);
-    
-    
+    width: 100%;
 }
 
-#rootHome table .proViewMore td{
+.proViewMore td{
     border: none;
     text-align: center;
     padding: 1rem;
+    /* width: 33.33%; */
 }
 
-#rootHome table .proViewMore td a{
+.viewMore{
     font-size: 1.8rem;
     text-transform: uppercase;
     font-weight: bold;
     color: #fff;
+    background: var(--red-primary);
+    width: 100%;
+    display: inline-block;
+    text-align: center;
 }
 
 #rootHome .call #rootCall .call{

@@ -13,13 +13,14 @@ const header = `
             </tr>
             `
 
+
 const footer = `
-    <tr class="proViewMore">
-        <td></td>
-        <td><a href="">xem thêm</a></td>
-        <td></td>
-    </tr>
+        <tr class="proViewMore">
+            <td colspan="3"><a class="viewMore" href="V">Xem thêm</a></td>
+        </tr>
 `
+
+
 // COMBO
 const comboVRender = V.map(e => {
     if(e.detail.freeApp && e.detail.freeApp != "" 
