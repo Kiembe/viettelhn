@@ -1,4 +1,5 @@
 {
     "cSpell.enabled": false,
-    "AllAutocomplete.showCurrentDocument": false
+    "AllAutocomplete.showCurrentDocument": false,
+    "liveServer.settings.port": 5501
 }

@@ -115,7 +115,9 @@
         font-size: 1.4rem;
     }
 
-    
+    .rootPosts .title h5{
+        font-size: 3rem !important;
+    }
 }
 
 @media screen and (max-width : 760px) {

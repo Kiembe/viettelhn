@@ -43,6 +43,8 @@ main .container .title p{
 .listPost .post{
     display: flex;
     padding: 1rem;
+    cursor: pointer;
+
     
 }
 
@@ -54,13 +56,13 @@ main .container .title p{
     border-radius: 0.5rem;
 }
 
-.listPost .post .content .title{
+.listPost .post .content p:first-child  {
     font-size: 1.6rem;
     color: initial;
     font-weight: bold;
 }
 
-.listPost .post .content .title:hover{
+.listPost .post .content p:first-child:hover{
     color: var(--red-primary);
 }
 

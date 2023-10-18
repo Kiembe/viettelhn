@@ -364,7 +364,7 @@ main .title p{
 }
 
 #rootHome table .tbContent .proDetail .call{
-    color: #ee9b01;
+    color: #ff8c00;
 }
 
 #rootHome table .tbContent .proAct {
@@ -556,6 +556,10 @@ footer .container .listPro ul li,
 footer .container .about ul li{
     font-size: 1.8rem;
     padding: 0.5rem;
+}
+
+footer .container .listPro ul li:hover{
+    color: var(--red-primary);
 }
 
 

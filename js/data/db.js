@@ -590,4 +590,9 @@ export const MP = proInCall[0].proMP
 export const MPX = proInCall[0].proMPX
 export const OUTC = proOutCall
 
+export const combo = proCombo
+export const month = proMonth
+export const inCall = proInCall
+export const outCall = proOutCall
+
 

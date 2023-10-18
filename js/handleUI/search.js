@@ -11,4 +11,5 @@ btnSearch.forEach((e,i) => {
             console.log(boxSearch[i].value);
         }
     }
+
 })
