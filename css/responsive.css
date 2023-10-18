@@ -26,6 +26,27 @@
 }
 
 @media screen and (max-width : 1000px) {
+
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .container{
+        padding: 1%;
+        width: 100%;
+    }
+
+    main .container .title img{
+        width: 100%;
+    }
+
+    .posts{
+        min-width: 100%;
+    }
+
+    
+
     header .navBar{
         display: none;
     }
@@ -59,6 +80,34 @@
     #rootMonth h5,
     #rootCall h5{
         font-size: 1.6rem;
+    }
+
+    main .title p{
+        font-size: 1.6rem;
+    }
+
+    .tutorial h5,
+    .note h5{
+        font-size: 1.8rem;
+    }
+
+    .note .tk{
+        font-size: 1.6rem;
+    }
+
+    .tutorial p,
+    .note p{
+        font-size: 1.6rem;
+    }
+
+    .tutorial span,
+    .note span{
+        font-size: 1.6rem !important;
+    }
+
+    .tutorial ul li,
+    .note ul li{
+        font-size: 1.6rem !important;
     }
 
     #rootHome table td ul li{

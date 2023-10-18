@@ -189,7 +189,7 @@ const proCombo = [
                     freeCall: "Miễn phí các cuộc gọi nội mạng Viettel dưới 20 phút <br> 35 phút gọi ngoại mạng (5 phút/ ngày)",
                     freeSms: "Free SMS nội mạng",
                     freeApp: "Miễn phí gói TV360 Basic",
-                    applyFor: ""
+                    applyFor: "Thuê bao trong danh sách khuyến mãi riêng"
                 }
             },
             {
@@ -202,7 +202,7 @@ const proCombo = [
                     freeCall: "Miễn phí các cuộc gọi nội mạng Viettel dưới 20 phút <br> 150 phút gọi ngoại mạng (5 phút/ ngày)",
                     freeSms: "Free SMS nội mạng",
                     freeApp: "Miễn phí gói TV360 Basic",
-                    applyFor: ""
+                    applyFor: "Thuê bao trong danh sách khuyến mãi riêng"
                 }
             },
             {
@@ -215,7 +215,7 @@ const proCombo = [
                     freeCall: "Miễn phí các cuộc gọi nội mạng Viettel dưới 20 phút <br> 450 phút gọi ngoại mạng (5 phút/ ngày)",
                     freeSms: "Free SMS nội mạng",
                     freeApp: "Miễn phí gói TV360 Basic",
-                    applyFor: ""
+                    applyFor: "Thuê bao trong danh sách khuyến mãi riêng"
                 }
             },
         ],

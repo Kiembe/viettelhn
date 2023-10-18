@@ -1,0 +1,70 @@
+main {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+main .container{
+    padding: 1%;
+    width: 85%;
+}
+
+main .container .title img{
+    width: 75%;
+    margin: 1rem 0 3rem;
+}
+
+main .container .title p{
+    text-align: justify;
+}
+
+.posts{
+    max-width: 25%;
+}
+
+.posts .container{
+    border: 0.1rem solid #ccc;
+    min-width: 100%;
+    padding: 0;
+}
+
+.posts .container .postHead{
+    font-size: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: var(--red-primary);
+    padding: 1rem;  
+    width: 100%;
+    text-align: center;
+}
+
+.listPost .post{
+    display: flex;
+    padding: 1rem;
+    
+}
+
+.listPost .post img{
+    width: 7.5rem;
+    height: 7.5rem;
+    object-fit: cover;
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+}
+
+.listPost .post .content .title{
+    font-size: 1.6rem;
+    color: initial;
+    font-weight: bold;
+}
+
+.listPost .post .content .title:hover{
+    color: var(--red-primary);
+}
+
+.listPost .post .content .time{
+    font-size: 1.2rem;
+    color: #9b9b9b;
+}
