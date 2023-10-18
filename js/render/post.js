@@ -8,7 +8,7 @@ const rootPosts= document.querySelector('.rootPosts')
 listPosts.forEach((e,i) => {
     e.onclick = () => {
         localStorage.setItem('id',i)
-        window.location="../../pages/post.html"
+        window.location="../pages/post.html"
         
     }
 })
