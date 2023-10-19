@@ -1,15 +1,34 @@
-import {combo,month,inCall,outCall} from '../data/db.js'
-import {posts} from '../data/postsData.js'
-import {handleRender} from './handle.js'
+import { combo, month, inCall, outCall } from '../data/db.js'
+import { posts } from '../data/postsData.js'
+import { handleRender } from './handle.js'
 
+const postsInner = document.querySelector('.listPost')
+const rootPosts = document.querySelector('.rootPosts')
+
+const postsRender = posts.map(e => {
+    return `
+    <div class="post">
+        <img src="${e.img}" alt="">
+        <div class="content">
+            <p>${e.title}</p>
+            <p class="time">
+            14/08/2023
+            </p>
+        </div>
+    </div>
+                    `
+})
+if(postsInner){
+    postsInner.innerHTML = postsRender.join('')
+}
 const listPosts = document.querySelectorAll('.post')
-const rootPosts= document.querySelector('.rootPosts')
 
-listPosts.forEach((e,i) => {
+listPosts.forEach((e, i) => {
     e.onclick = () => {
-        localStorage.setItem('id',i)
-        window.location="../pages/post.html"
-        
+        console.log(i);
+        localStorage.setItem('id', i)
+        window.location = "../pages/post.html"
+
     }
 })
 
@@ -32,24 +51,26 @@ const header = `
 
 
 const comboPrice = combo
-.map((combo) => combo.proV.concat(combo.proF).concat(combo.proN).concat(combo.proMXH).concat(combo.proVN)) 
-  .flat() 
-  .filter((product) => product.price === posts[id].price);
+    .map((combo) => combo.proV.concat(combo.proF).concat(combo.proN).concat(combo.proMXH).concat(combo.proVN))
+    .flat()
+    .filter((product) => product.price === posts[id].price);
 
-  const monthPrice = month
-  .map((month) => month.proST.concat(month.proSD).concat(month.otherPro)) 
-  .flat() 
-  .filter((product) => product.price === posts[id].price);
-  
-  const inCallPrice = inCall
-  .map((inCall) => inCall.proMP.concat(inCall.proMPX)) 
-  .flat() 
-  .filter((product) => product.price === posts[id].price);
-  
-  const outCallPrice = outCall 
-  .flat() 
-  .filter((product) => product.price === posts[id].price);
-  
-  const allPro = comboPrice.concat(monthPrice).concat(inCallPrice).concat(outCallPrice)
-  
-rootPosts.innerHTML = title + "<table>" + header + handleRender(allPro).join('') + "</table>"
+const monthPrice = month
+    .map((month) => month.proST.concat(month.proSD).concat(month.otherPro))
+    .flat()
+    .filter((product) => product.price === posts[id].price);
+
+const inCallPrice = inCall
+    .map((inCall) => inCall.proMP.concat(inCall.proMPX))
+    .flat()
+    .filter((product) => product.price === posts[id].price);
+
+const outCallPrice = outCall
+    .flat()
+    .filter((product) => product.price === posts[id].price);
+
+const allPro = comboPrice.concat(monthPrice).concat(inCallPrice).concat(outCallPrice)
+
+if (rootPosts) {
+    rootPosts.innerHTML = title + "<table>" + header + handleRender(allPro).join('') + "</table>"
+}

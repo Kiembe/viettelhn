@@ -70,3 +70,25 @@ main .container .title p{
     font-size: 1.2rem;
     color: #9b9b9b;
 }
+
+/* rules */
+
+.content .head {
+    font-size: 2rem;
+    font-weight: bold;  
+}
+
+.content p{
+    font-size: 1.8rem;
+    padding: 0.5rem;
+}
+
+.content h5{
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+.content ul li{
+    font-size: 1.8rem;
+    padding: 1rem;
+}

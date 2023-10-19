@@ -572,7 +572,7 @@ footer .container .about span{
     font-size: 1.8rem;
 }
 
-footer .container .about span:hover{
+footer .container .about li:hover{
     color: var(--red-primary);
 }
 
