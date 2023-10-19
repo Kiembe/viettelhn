@@ -6,6 +6,9 @@ import { handleRender } from '../render/handle.js'
 const btnSearch = document.querySelectorAll('.navBar .search .btnSearch')
 const boxSearch = document.querySelectorAll('.navBar .search .boxSearch')
 
+const btnHome = document.querySelectorAll('.btnHome')
+const boxHome = document.querySelectorAll('.boxHome')
+
 const btnSearchMobile = document.querySelector('.mobileMenuShow .container .menu .btnSearch')
 const boxSearchMobile = document.querySelector('.mobileMenuShow .container .menu .boxSearch')
 
@@ -34,6 +37,17 @@ btnSearchMobile.onclick = () => {
             const searchContent = boxSearchMobile.value.toUpperCase()
             localStorage.setItem('searchContent',searchContent)
             window.location = "../pages/search.html"
+        }
+    }
+
+btnHome.onclick = () => {
+        if(boxSearchMobile.value == ""){
+            boxSearchMobile.classList.toggle('show')
+            boxSearchMobile.classList.toggle('show')
+        }else{
+            const searchContent = boxSearchMobile.value.toUpperCase()
+            localStorage.setItem('searchContent',searchContent)
+            window.location = "pages/search.html"
         }
     }
 
