@@ -41,9 +41,9 @@ btnSearchMobile.onclick = () => {
     }
 
 btnHome.onclick = () => {
-        if(boxSearchMobile.value == ""){
-            boxSearchMobile.classList.toggle('show')
-            boxSearchMobile.classList.toggle('show')
+        if(boxHome.value == ""){
+            boxHome.classList.toggle('show')
+            boxHome.classList.toggle('show')
         }else{
             const searchContent = boxSearchMobile.value.toUpperCase()
             localStorage.setItem('searchContent',searchContent)
