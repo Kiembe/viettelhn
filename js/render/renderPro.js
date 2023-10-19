@@ -15,22 +15,34 @@ const header = `
             `
 
 
-const footer = `
+const footerCombo = `
         <tr class="proViewMore">
-            <td colspan="3"><a class="viewMore" href="V">Xem thêm</a></td>
+            <td colspan="3"><a class="viewMore" href="./pages/combo.html">Xem thêm</a></td>
+        </tr>
+`
+
+const footerMonth = `
+        <tr class="proViewMore">
+            <td colspan="3"><a class="viewMore" href="./pages/month.html">Xem thêm</a></td>
+        </tr>
+`
+
+const footerCall = `
+        <tr class="proViewMore">
+            <td colspan="3"><a class="viewMore" href="./pages/call.html">Xem thêm</a></td>
         </tr>
 `
 
 
 // COMBO
-rootCombo.innerHTML = header + handleRender(V).join('') + handleRender(F).join('') + footer
+rootCombo.innerHTML = header + handleRender(V).join('') + handleRender(F).join('') + footerCombo
 
 // MONTH
 
-rootMonth.innerHTML = header + handleRender(ST).join('') + handleRender(SD).join('') + footer
+rootMonth.innerHTML = header + handleRender(ST).join('') + handleRender(SD).join('') + footerMonth
 
 // CALL
 
-rootCall.innerHTML = header + handleRender(MP).join('') + handleRender(MPX).join('') + footer
+rootCall.innerHTML = header + handleRender(MP).join('') + handleRender(MPX).join('') + footerCall
 
 
