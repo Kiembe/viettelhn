@@ -45,4 +45,4 @@ rootMonth.innerHTML = header + handleRender(ST).join('') + handleRender(SD).join
 
 rootCall.innerHTML = header + handleRender(MP).join('') + handleRender(MPX).join('') + footerCall
 
-
+console.log(handleRender(V).join(''));

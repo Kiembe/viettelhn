@@ -3,14 +3,14 @@
 header{
     height: 7.5rem;
     width: 100%;
-    padding: 3rem 10rem;
+    padding: 3rem 5rem;
     box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0,0.1);
 }
 
 #headerFixed{
     top: -100%;
     position: fixed;
-    z-index: 0;
+    z-index: 1;
 }
 
 #headerFixed.sticky{
@@ -34,7 +34,7 @@ header .container{
 }
 
 header .logo img{
-    height: 4.5rem;
+    height: 3rem;
 }
 
 header .menu,
@@ -429,7 +429,7 @@ main .title p{
 /* <-- tutorial --> */
 
 .tutorial h5{
-    font-size: 3rem;
+    font-size: 2.4rem;
     text-transform: uppercase;
 }
 
@@ -479,7 +479,7 @@ main .title p{
 /* <-- NOTE --> */
 
 .note h5{
-    font-size: 3rem;
+    font-size: 2.4rem;
     margin-top: 5rem;
 }
 

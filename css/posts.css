@@ -1,0 +1,54 @@
+.postTitle {
+    font-size: 3rem;
+    text-align: start;
+}
+
+.rootListPosts {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1%;
+    /* max-height: 110rem;
+    overflow: scroll; */
+}
+
+.posts{
+    max-height: 100rem;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.rootListPosts .post{
+    padding: 1rem;
+    cursor: pointer;
+    /* border: 1px solid #ccc;
+    border-radius: 1rem; */
+    display: flex;
+    flex-direction: column  ;
+    justify-content: space-between;
+}
+
+.post img{
+    width: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    border-radius: 0.5rem;
+}
+
+.post img:hover{
+    transform: scale(1.05);
+}
+
+.post h5{
+    font-size: 1.8rem !important;
+    color: #313131;
+}
+
+.post p{
+    font-size: 1.4rem;
+    color: #ccc;
+}
+
+footer{
+    margin-top: 10rem;
+}
+    

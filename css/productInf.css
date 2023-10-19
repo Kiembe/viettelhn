@@ -22,10 +22,13 @@ main .container .title p{
 
 .posts{
     max-width: 25%;
+    max-height: 98rem;
+    overflow: hidden;
+    border: 1px solid #ccc;
 }
 
 .posts .container{
-    border: 0.1rem solid #ccc;
+    /* border: 0.1rem solid #ccc; */
     min-width: 100%;
     padding: 0;
 }
@@ -92,3 +95,30 @@ main .container .title p{
     font-size: 1.8rem;
     padding: 1rem;
 }
+
+.content .center{
+    text-align: center;
+}
+
+.content span{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.content a{
+    font-size: 1.8rem;
+    color: var(--red-primary);
+    font-weight: bold;
+}
+
+.content img{
+    margin: 0 auto;
+    padding: 1rem;
+} 
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+/*  */
