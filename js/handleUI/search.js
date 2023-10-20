@@ -12,24 +12,44 @@ const boxHome = document.querySelectorAll('.boxHome')
 const btnSearchMobile = document.querySelector('.mobileMenuShow .container .menu .btnSearch')
 const boxSearchMobile = document.querySelector('.mobileMenuShow .container .menu .boxSearch')
 
+const btnHomeMobile = document.querySelector('.mobileMenuShow .container .menu .btnHome')
+const boxHomeMobile = document.querySelector('.mobileMenuShow .container .menu .boxHome')
+
+// console.log(btnSearchMobile.length);
+
 const rootSearch = document.querySelector('.rootSearch')
 
 // console.log(boxSearch);
-
-btnSearch.forEach((e,i) => {
-    e.onclick = () => {
-        if(boxSearch[i].value == ""){
-            boxSearch[i].classList.toggle('show')
-            btnSearch[i].classList.toggle('show')
-        }else{
-            const searchContent = boxSearch[i].value.toUpperCase()
-            localStorage.setItem('searchContent',searchContent)
-            window.location = "../pages/search.html"
+if(btnSearch.length > 0){
+    btnSearch.forEach((e,i) => {
+        e.onclick = () => {
+            if(boxSearch[i].value == ""){
+                boxSearch[i].classList.toggle('show')
+                btnSearch[i].classList.toggle('show')
+            }else{
+                const searchContent = boxSearch[i].value.toUpperCase()
+                localStorage.setItem('searchContent',searchContent)
+                window.location = "../pages/search.html"
+            }
         }
-    }
-})
+    })
+}if(btnHome.length > 0 ){
+    btnHome.forEach((e,i) => {
+        e.onclick = () => {
+            if(boxHome[i].value == ""){
+                btnHome[i].classList.toggle('show')
+                boxHome[i].classList.toggle('show')
+            }else{
+                const searchContent = boxHome[i].value.toUpperCase()
+                localStorage.setItem('searchContent',searchContent)
+                window.location = "./pages/search.html"
+            }
+        }
+    })
+}
 
-btnSearchMobile.onclick = () => {
+if(btnSearchMobile){
+    btnSearchMobile.onclick = () => {
         if(boxSearchMobile.value == ""){
             boxSearchMobile.classList.toggle('show')
             btnSearch.classList.toggle('show')
@@ -38,18 +58,16 @@ btnSearchMobile.onclick = () => {
             localStorage.setItem('searchContent',searchContent)
             window.location = "../pages/search.html"
         }
-    }
-
-btnHome.onclick = () => {
-        if(boxHome.value == ""){
-            boxHome.classList.toggle('show')
-            boxHome.classList.toggle('show')
-        }else{
-            const searchContent = boxSearchMobile.value.toUpperCase()
+    } 
+}if(btnHomeMobile){
+    btnHomeMobile.onclick = () => {
+            const searchContent = boxHomeMobile.value.toUpperCase()
             localStorage.setItem('searchContent',searchContent)
-            window.location = "pages/search.html"
-        }
-    }
+            window.location = "./pages/search.html"
+    } 
+}
+
+
 
 
 const searchVa = localStorage.getItem('searchContent')
