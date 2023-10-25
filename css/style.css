@@ -288,12 +288,13 @@ header .navBar .search button i{
 /* <-- MAIN CSS --> */
 main{
     padding: 5rem 2%;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
 
 main .container{
-    width: 90%;
+    width: 100%;
 }
 
 main .title{
@@ -355,6 +356,17 @@ main .title p{
     width: 15%;
 }
 
+#rootHome table .tbContent .proInf ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#rootHome table .tbContent .proInf ul li:nth-child(2){
+    border-bottom: 0.2rem solid #ccc;
+    border-width: 40%;
+}
+
 #rootHome table .tbContent .proInf ul li:first-child{
     font-weight: bold;
 }
@@ -368,7 +380,7 @@ main .title p{
 }
 
 #rootHome table .tbContent .proAct {
-    max-width: 25%;
+    width: 25%;
     text-align: center;
     padding: 1rem;
 }
@@ -499,6 +511,13 @@ main .title p{
     font-weight: bold;
     font-size: 2rem;
 
+}
+
+.note p a{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--red-primary);
+    font-style: italic;
 }
 
 .note img{

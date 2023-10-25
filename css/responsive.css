@@ -110,6 +110,10 @@
         font-size: 1.6rem !important;
     }
 
+    .note p a{
+        font-size: 1.6rem;
+    }
+
     #rootHome table td ul li{
         padding: 0.5rem;
         font-size: 1.4rem;

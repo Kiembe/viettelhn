@@ -20,8 +20,13 @@ main .container .title p{
     text-align: justify;
 }
 
+main .container .title h5{
+    font-size: 3rem;
+}
+
 .posts{
     max-width: 25%;
+    height: fit-content;
     max-height: 98rem;
     overflow: hidden;
     border: 1px solid #ccc;

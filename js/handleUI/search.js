@@ -29,7 +29,7 @@ if(btnSearch.length > 0){
             }else{
                 const searchContent = boxSearch[i].value.toUpperCase()
                 localStorage.setItem('searchContent',searchContent)
-                window.location = "../pages/search.html"
+                window.location = "../../tim_kiem.html"
             }
         }
     })
@@ -42,7 +42,7 @@ if(btnSearch.length > 0){
             }else{
                 const searchContent = boxHome[i].value.toUpperCase()
                 localStorage.setItem('searchContent',searchContent)
-                window.location = "./pages/search.html"
+                window.location = "../../tim_kiem.html"
             }
         }
     })
@@ -56,14 +56,14 @@ if(btnSearchMobile){
         }else{
             const searchContent = boxSearchMobile.value.toUpperCase()
             localStorage.setItem('searchContent',searchContent)
-            window.location = "../pages/search.html"
+            window.location = "../../tim_kiem.html"
         }
     } 
 }if(btnHomeMobile){
     btnHomeMobile.onclick = () => {
             const searchContent = boxHomeMobile.value.toUpperCase()
             localStorage.setItem('searchContent',searchContent)
-            window.location = "./pages/search.html"
+            window.location = "../../tim_kiem.html"
     } 
 }
 
